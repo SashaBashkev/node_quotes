@@ -1,0 +1,9 @@
+extends default
+
+block content
+  div.card
+    div.card-header
+      h2.h2 Quote by: #{result.name}
+    div.card-body
+      p.card-text #{result.quote}
+      a(href='/').btn.btn-primary back home  

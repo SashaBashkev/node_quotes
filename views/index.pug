@@ -1,0 +1,21 @@
+extends default
+block header
+    header.header 
+     div.container
+       h1.display-4 Share with words that fill someones life with new colors and emotions.
+block content
+  form(action='/' method='POST').my-4
+    .form-group
+      label(for='name') Author name
+      input.form-control(id='name',type='text',placeholder='name',name='name')
+    .form-group  
+      label(for='quote') Quote
+      textarea.form-control(id='quote',name='quote')
+    button.btn.btn-primary(type='submit') Submit
+    h1.my-4 Latest Quotes
+    each item in data
+      - var url = item._id;
+      blockquote.blockquote.text-left
+        a(href='/quote/' + url)
+          p.mb-0 #{item.quote}
+        footer.blockquote-footer #{item.name}
