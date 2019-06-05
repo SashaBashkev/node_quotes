@@ -9,8 +9,7 @@ app.use(express.static(__dirname + "/node_modules/bootstrap/dist/"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "pug");
 // MongoDB
-const URL =
-  "mongodb+srv://admin:admin123@mytest-app-c6axr.mongodb.net/test?retryWrites=true";
+const URL = `mongodb+srv://admin:admin123@mongodb-crud-0htbe.mongodb.net/test?retryWrites=true&w=majority`;
 const DB_NAME = "expample";
 let database, collection;
 // PATHS
