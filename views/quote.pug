@@ -3,7 +3,9 @@ extends default
 block content
   div.card
     div.card-header
-      h2.h2 Quote by: #{result.name}
-    div.card-body
-      p.card-text #{result.quote}
+      h2.h2 Quote by: #{result.author}
       a(href='/').btn.btn-primary back home  
+    div.card-body
+      p.card-text #{result.quote} 
+      a(href='/edit').btn.btn-success.btn-small Edit 
+      a(href='/').btn.btn-danger.btn-small.mx-3 Delete 

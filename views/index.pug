@@ -6,8 +6,8 @@ block header
 block content
   form(action='/' method='POST').my-4
     .form-group
-      label(for='name') Author name
-      input.form-control(id='name',type='text',placeholder='name',name='name')
+      label(for='author') Author name
+      input.form-control(id='author',type='text',placeholder='author',name='author')
     .form-group  
       label(for='quote') Quote
       textarea.form-control(id='quote',name='quote')
@@ -16,6 +16,6 @@ block content
     each item in data
       - var url = item._id;
       blockquote.blockquote.text-left
-        a(href='/quote/' + url)
+        a(href='/details/' + url)
           p.mb-0 #{item.quote}
-        footer.blockquote-footer #{item.name}
+        footer.blockquote-footer By: #{item.author}

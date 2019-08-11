@@ -1,0 +1,11 @@
+extends default
+
+block content
+  form(action='/' method='POST').my-4
+    .form-group
+      label(for='author') Author name
+      input.form-control(id='author',type='text',placeholder='author',name='author' value='#{result.author}')
+    .form-group  
+      label(for='quote') Quote
+      textarea.form-control(id='quote',name='quote', value='#{result.quote}')
+    button.btn.btn-primary(type='submit') Submit
